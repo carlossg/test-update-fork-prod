@@ -28,6 +28,7 @@ jobs:
           # ref: my-branch
           # REQUIRED if your upstream repo is private (see wiki)
           persist-credentials: false
+          ref: 'upstream-sync'
 
       - name: Checkout branch
         run: |
