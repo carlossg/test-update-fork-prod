@@ -56,3 +56,7 @@ jobs:
 
       - name: Show value of 'has_new_commits'
         run: echo ${{ steps.sync.outputs.has_new_commits }}
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        if: steps.sync.outputs.has_new_commits == 'true'
